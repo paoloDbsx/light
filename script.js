@@ -5,6 +5,6 @@ div.addEventListener("mousemove", (e) => {
   let y = e.clientY - rect.top;
   div.style.setProperty("--x", x + "px");
   div.style.setProperty("--y", y + "px");
-  //   console.log(x);
-  //   console.log(y);
+  console.log(x);
+  console.log(y);
 });

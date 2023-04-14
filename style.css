@@ -17,9 +17,12 @@ p {
 .div {
   position: absolute;
   top: 0;
-  background: black;
-  width: 99vw;
-  height: 99vh;
+  border-bottom: solid 49vh- 100px black;
+  border-top: solid 49vh- 100px black;
+  border-left: solid 49vw- 100px black;
+  border-right: solid 49vw- 100px black;
+  width: 98vw;
+  height: 98vh;
 }
 
 .div::before {
@@ -30,11 +33,15 @@ p {
   top: var(--y);
   width: var(--size);
   height: var(--size);
-  background: radial-gradient(circle closest-side, red, transparent);
+  background: radial-gradient(
+    circle closest-side,
+    rgb(149, 14, 14),
+    transparent
+  );
   transform: translate(-50%, -50%);
   transition: width 1s ease;
 }
 
 .div:hover::before {
-  --size: 500px;
+  --size: 200px;
 }
