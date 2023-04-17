@@ -22,17 +22,13 @@ p {
 }
 
 .div::before {
-  --R: 0;
-  --L: 0;
-  --T: 0;
-  --B: 0;
   --size: 0;
   content: "";
   position: absolute;
-  border-bottom: solid var(--B) black;
-  border-top: solid var(--T) black;
-  border-left: solid var(--L) black;
-  border-right: solid var(--R) black;
+  border-bottom: solid 5000px black;
+  border-top: solid 5000px black;
+  border-left: solid 5000px black;
+  border-right: solid 5000px black;
   left: var(--x);
   top: var(--y);
   width: var(--size);
@@ -45,14 +41,10 @@ p {
     transparent
   );
   transform: translate(-50%, -50%);
-  transition: width 1s ease;
+  transition: width 2s ease;
 }
 
 .div:hover::before {
   border-radius: 20000px;
   --size: 500px;
-  --R: 5000px;
-  --L: 5000px;
-  --T: 5000px;
-  --B: 5000px;
 }
