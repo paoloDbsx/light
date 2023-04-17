@@ -17,25 +17,31 @@ p {
 .div {
   position: absolute;
   top: 0;
-  border-bottom: solid 49vh- 100px black;
-  border-top: solid 49vh- 100px black;
-  border-left: solid 49vw- 100px black;
-  border-right: solid 49vw- 100px black;
   width: 98vw;
   height: 98vh;
 }
 
 .div::before {
+  --R: 0;
+  --L: 0;
+  --T: 0;
+  --B: 0;
   --size: 0;
   content: "";
   position: absolute;
+  border-bottom: solid var(--B) black;
+  border-top: solid var(--T) black;
+  border-left: solid var(--L) black;
+  border-right: solid var(--R) black;
   left: var(--x);
   top: var(--y);
   width: var(--size);
   height: var(--size);
   background: radial-gradient(
-    circle closest-side,
-    rgb(149, 14, 14),
+    closest-corner,
+    transparent,
+    black,
+    red,
     transparent
   );
   transform: translate(-50%, -50%);
@@ -43,5 +49,10 @@ p {
 }
 
 .div:hover::before {
-  --size: 200px;
+  border-radius: 20000px;
+  --size: 500px;
+  --R: 5000px;
+  --L: 5000px;
+  --T: 5000px;
+  --B: 5000px;
 }
